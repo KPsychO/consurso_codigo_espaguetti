@@ -40,7 +40,7 @@ int main(){
 	suma.open(fileName);
 	(suma.is_open())? ({goto File_open;}) : ({goto File_not_open;});
 	File_open:
-	suma << "#include <iostream>\n inline void out(int n) {int N = n, rev, count = 0; rev = N; if (N == 0) { putchar_unlocked('0'); return; } while ((rev % 10) == 0) { count++; rev /= 10; } rev = 0; while (N != 0) { rev = (rev << 3) + (rev << 1) + N % 10; N /= 10; } while (rev != 0) { putchar_unlocked(rev % 10 + '0'); rev /= 10; } while (count--) putchar_unlocked('0');}\n int main(){int a = " << a << ";  int b = " << b << "; int res = a + b; out(res); std::cout << std::endl; return 0;}";
+	suma << "#include <iostream>\ninline void out(int n) {int N = n, rev, count = 0; rev = N; if (N == 0) { putchar_unlocked('0'); return; } while ((rev % 10) == 0) { count++; rev /= 10; } rev = 0; while (N != 0) { rev = (rev << 3) + (rev << 1) + N % 10; N /= 10; } while (rev != 0) { putchar_unlocked(rev % 10 + '0'); rev /= 10; } while (count--) putchar_unlocked('0');} int main(){int a = " << a << ";  int b = " << b << "; int res = a + b; out(res); std::cout << std::endl; return 0;}";
 	suma.close();
 	compile = "g++ -Wall -O ";
 	compile += fileName;
