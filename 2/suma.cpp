@@ -22,11 +22,11 @@ int main(){
 	std::ofstream suma;
 	std::ofstream comp;
 	std::ofstream exec;
-	std::cout << "Introduzca 2 números naturales (0 incluido) para calcular la suma de forma que mueran gatitos. (-1 -1 para salir)\n";
+	std::cout << "Introduzca 2 números para calcular la suma de forma que mueran gatitos.\n";
 	INI:
 	in(a);
 	in(b);
-	(0)? ({goto FIN;}) : ({goto EXEC;});
+	(!(a && b))? ({goto FIN;}) : ({goto EXEC;});
 	EXEC:
 	sa = std::to_string(abs(a));
 	sb = std::to_string(abs(b));
