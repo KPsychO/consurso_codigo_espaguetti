@@ -1,5 +1,8 @@
  // 	PsychO - Concurso de código espaguetti - (Porfavor Pascal, no te autolesiones)
 
+ // g++ -Wall -O suma.cpp -o suma
+ // ./suma
+
 #include <bits/stdc++.h>
 
 inline void in(long long int &n) {
