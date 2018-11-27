@@ -1,5 +1,4 @@
-
-// 	PsychO - Concurso de código espaguetti - (Porfavor Pascal, no te autolesiones)
+ // 	PsychO - Concurso de código espaguetti - (Porfavor Pascal, no te autolesiones)
 
 #include <bits/stdc++.h>
 
@@ -27,10 +26,10 @@ int main(){
 	INI:
 	in(a);
 	in(b);
-	((a == -1) && (b == -1))? ({goto FIN;}) : ({goto EXEC;});
+	(0)? ({goto FIN;}) : ({goto EXEC;});
 	EXEC:
-	sa = std::to_string(a);
-	sb = std::to_string(b);
+	sa = std::to_string(abs(a));
+	sb = std::to_string(abs(b));
 	fileName = sa;
 	fileName += "+";
 	fileName += sb;
@@ -41,7 +40,7 @@ int main(){
 	suma.open(fileName);
 	(suma.is_open())? ({goto File_open;}) : ({goto File_not_open;});
 	File_open:
-	suma << "#include <bits/stdc++.h> \n int TAM = 50;  inline void out(long long int n){ int N = n, rev, count = 0; rev = N; 	if (N == 0) { putchar_unlocked('0'); std::cout << std::endl;	return; } 	while ((rev % 10) == 0) { count++; rev /= 10; } 	rev = 0; 	while (N != 0) { rev = (rev << 3) + (rev << 1) + N % 10; N /= 10; } 	while (rev != 0) { putchar_unlocked(rev % 10 + '0'); rev /= 10; } 	while (count--) putchar_unlocked('0'); std::cout << std::endl;  }  int main(){  	srand(time(NULL));  	int a = " << a << "; int b = " << b << "; int va[TAM] = {rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, a}; 	int vb[TAM] = {rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, b}; rand: std::random_shuffle(&va[0], &va[50]);	std::random_shuffle(&vb[0], &vb[50]);  (va[0] == a && vb[0] == b)? ({goto sum;}) : ({goto rand;}); sum:  out(va[0] + vb[0]); return 0;}";
+	suma << "#include <bits/stdc++.h> \n int TAM = 50;   int main(){ srand(time(NULL)); long long int a = " << a << "; long long int b = " << b << "; long long int va[TAM] = {rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, a}; long long int vb[TAM] = {rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 10, b}; rand: std::random_shuffle(&va[0], &va[50]);	std::random_shuffle(&vb[0], &vb[50]);  (va[0] == a && vb[0] == b)? ({goto sum;}) : ({goto rand;}); sum: std::cout << va[0] + vb[0] << std::endl; return 0;}";
 	suma.close();
 	compile = "g++ -Wall -O ";
 	compile += fileName;
